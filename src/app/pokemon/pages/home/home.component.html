@@ -1,0 +1,43 @@
+
+
+<div class="d-flex flex-column h-100">
+    <header class="Header">
+        <nav class="Header-nav bg-danger navbar ">
+            <div class="Header-container container-fluid">
+                <button class="Header-button navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#CanvasPokemon">
+                    <span class="Header-span navbar-toggler-icon"></span>
+                </button>
+                <a class="Header-a navbar-brand" href="#"><img src="assets/pokemonLogo.png" alt="img-pokemon"
+                        class="Header-img"></a>
+                <div class="Header-canvas offcanvas offcanvas-start " tabindex="-1" id="CanvasPokemon">
+                    <div class="Header-canvas-header offcanvas-header bg-danger">
+                        <h5 class="Header-h5 offcanvas-title" id="offcanvasDarkNavbarLabel"> <img
+                                src="assets/pokemonLogo.png" alt="img-pokemon" class="Header-img"></h5>
+                        <button type="button" class="Header-button btn-close btn-close-dark" data-bs-dismiss="offcanvas"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="Header-canvas-body offcanvas-body bg-danger">
+                        <ul class="Header-ul nav nav-pills d-flex flex-column">
+                            <li class="Header-li nav-link" *ngFor="let side of sidenavPokemon">
+                                <a class="Header-a nav-link" [routerLink]="side.ruta"
+                                    routerLinkActive="active">{{side.nombre}}</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+  <!--   <div class="" style="border:2px solid green">
+
+    </div> -->
+   <router-outlet></router-outlet> 
+</div>
+
+
+
+  
+
+ 

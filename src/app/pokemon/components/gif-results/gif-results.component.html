@@ -1,0 +1,9 @@
+<div class="col-sm-6 col-xl-3 mb-1 animate__animated animate__fadeIn"  *ngFor="let gif of gifs">
+    <div class="card rounded-3">
+        <img [src]="gif.images.downsized_medium.url" alt="img" class="img-fluid">
+        <div class="card-body bg-danger rounded-bottom">
+            <div class="card-title">{{gif.title}}</div>
+            <div class="card-text"></div>
+        </div>
+    </div>
+</div>

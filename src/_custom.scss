@@ -1,0 +1,36 @@
+//modified variables
+$family: 'Inter', sans-serif;
+$font-family-sans-serif: $family ;
+$font-weight-bold: 800;
+
+//modified navbar 
+$navbar-padding-y: 0;
+$navbar-light-color: white;
+$navbar-light-toggler-border-color: white;
+$nav-link-color: white;
+$nav-link-hover-color: yellow;
+$nav-pills-link-active-bg: rgba(255, 255, 255, 0.8);
+$nav-pills-link-active-color: red;
+
+//shadows
+$box-shadow-sm: 0rem 0rem 2rem #d9534f !default;
+
+//inputs
+$input-focus-border-color: red;
+$input-border-color: yellow;
+$input-bg: #d9534f;
+$input-color: white;
+$input-focus-border-color: white;
+$input-placeholder-color:white;
+$input-focus-box-shadow: 0rem 0rem 1rem red;
+
+//pagination
+$pagination-color: #d9534f;
+$pagination-active-color: white;
+$pagination-active-bg: #d9534f;
+
+//card
+$card-border-color : white;
+$card-color: white;
+
+@import "../node_modules/bootstrap/scss/bootstrap.scss"

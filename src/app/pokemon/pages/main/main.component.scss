@@ -1,0 +1,49 @@
+@use "src/_custom" as *;
+
+.Main {
+    &-img {
+        filter: brightness(1.1);
+        mix-blend-mode: multiply;
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+    }
+
+    &-p {
+        @include media-breakpoint-up(md) {
+            width: 75%;
+        }
+
+    }
+
+    &-card {
+        transition:box-shadow .2s ease-out;
+
+        &:hover {
+            box-shadow: $box-shadow-sm ;
+            cursor: pointer;
+          
+        }
+
+        max-height: 18rem;
+
+        &-row {
+            position: relative;
+            max-height: 18rem;
+        }
+
+        &-img {
+            opacity: 0.9;
+            max-height: 18rem;
+        }
+
+        &-title {
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+    }
+
+}

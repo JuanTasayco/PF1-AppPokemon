@@ -1,0 +1,11 @@
+<form class="mb-2" (ngSubmit)="obtenerBusqueda()" [formGroup]="miFormulario">
+    <input type="text" class="form-control"
+    formControlName="pokemon"
+    type="text" 
+    placeholder="Busca tu pokemon.."
+    name="search"
+    #pokemon
+    (input)="enviarBusquedaParaFiltro(pokemon.value)"
+    >
+</form>
+<!-- (keypress)="obtenerBusqueda($event)" -->

@@ -1,0 +1,7 @@
+@use "./app/app.component";
+@use "./app/pokemon/pages/home/home.component";
+@use "./app/pokemon/pages/main/main.component";
+@use "./app/pokemon/components/search/search.component";
+@use "./app/pokemon/components/table-results/table-results.component";
+@use "./app/pokemon/pages/pokemons-gifs/pokemons-gifs.component";
+@use "./app/pokemon/pages/pokemons-table/pokemons-table.component";

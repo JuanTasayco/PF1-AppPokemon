@@ -1,0 +1,49 @@
+<div class="container overflow-auto">
+
+    <section class="row position-relative  mt-5">
+        <div class="col-md-6">
+            <div class="card shadow-lg bg-light">
+                <img src="assets/card_2.jpg" alt="" class="Section-img m-auto p-2">
+                <div class="card-body">
+                    <div class="card-title"></div>
+                    <div class="card-text">
+                        <p class="text-center text-dark">"La gran leyenda, es una criatura que destaca por su poder
+                            único y
+                            excepcional, en comparación con el resto de
+                            los Pokémon. Generalmente los Pokémon legendarios forman parte de una leyenda o mito Pokémon
+                            y suelen destacar por la dificultad que conlleva su obtención."</p>
+                        <h4 class="text-center fw-bold text-danger">Raikou</h4>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-md-6 m-auto animate__animated animate__flash">
+            <div class="Section-card2 card m-auto d-none d-md-block bg-light">
+                <img src="assets/pokeTables.webp" alt="" class="img-fluid Section-img2">
+                <div class="card-body">
+                    <div class="card-title"></div>
+                    <div class="card-text ">
+                        <p class="text-center text-dark">Recuerda dar click a tu pokemon favorito en nuestra tabla, esto
+                            te
+                            redireccionará a su card y podrás observar una descripción mucho más detallada. No olvides
+                            compartir la página, eso nos ayudaría muchísimo.</p>
+                        <h4 class="text-center fw-bold text-danger"></h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="Table-container mt-5 ">
+
+        <div class="Table-search w-50 m-auto mb-5">
+            <app-search (emitirDebounce)="obtenerBusqueda($event)"></app-search>
+        </div>
+
+        <app-table-results [pokemonsTable]="pokemons" [searchTable]="search"></app-table-results>
+
+
+    </div>
+
+</div>

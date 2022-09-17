@@ -1,0 +1,29 @@
+<div class="Sidenav container-fluid h-100">
+    <div class="Sidenav-row row d-flex">
+        <div class="Sidenav-col col-md-4 col-lg-2 h-auto">
+            <h3 class="p-2 fs-4 fw-bold mt-3 text-center">Busquedas Recientes</h3>
+
+
+            <ul class="nav d-flex flex-column gap-3 align-items-center nav-pill shadow-lg bg-danger rounded-3">
+                <li class="Sidenav-li nav-link d-none d-md-block" *ngFor="let names of busquedas"
+                    (click)="obtenerBusqueda(names)">{{names | titlecase}}</li>
+                <li class="Sidenav-li nav-link d-block d-md-none">{{busquedas[0] | titlecase}}</li>
+            </ul>
+
+
+            <img src="assets/find-pokemon.png" alt="" class="Sidenav-img img-fluid d-none d-md-block mt-3 animate__animated animate__backInRight">
+        </div>
+        <div class="col-md-8 col-lg-10 p-4">
+
+            <app-search (emitirBusqueda)="obtenerBusqueda($event)"></app-search>
+            <div class="container-xl">
+                <app-gif-results [gifsResults]="gifs" class="row"></app-gif-results>
+            </div>
+            <div *ngIf="!arrayBusquedasEsVacio && busquedas.length<1">
+                <div class="alert alert-danger" role="alert">
+                    Aún no podemos encontrar resultados con: {{busquedas.at(0)}}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

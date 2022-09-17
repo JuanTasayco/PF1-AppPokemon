@@ -1,0 +1,38 @@
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Pokemon</th>
+            <th scope="col">Altura</th>
+            <th scope="col">Peso</th>
+            <th scope="col">Edad</th>
+            <th scope="col">Tipo</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let pokemon of pokemons | filtro:search | slice: (page-1) * pageSize : page * pageSize ">
+            <th scope="row" class="text-danger">{{ pokemon.id }}</th>
+            <td>{{pokemon.name}}</td>
+            <td><img [src]="pokemon.sprites.other?.['official-artwork']?.front_default" alt="" width="80px"></td>
+            <td>{{pokemon.height * 10 | number}} cm</td>
+
+            <td>{{pokemon.weight / 10 | number}} kg</td>
+            <td>
+                <p *ngFor="let tipo of pokemon.types"> {{tipo.type.name |titlecase}}</p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+
+<div class="d-flex justify-content-between p-2">
+    <ngb-pagination [collectionSize]="collectionSize" [(page)]="page" [pageSize]="pageSize">
+    </ngb-pagination>
+
+
+    <select class="form-select" style="width: auto" [(ngModel)]="pageSize">
+        <option [ngValue]="4">4 items per page</option>
+        <option [ngValue]="6">6 items per page</option>
+        <option [ngValue]="8">8 items per page</option>
+    </select>
+</div>

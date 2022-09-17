@@ -1,0 +1,13 @@
+@use "src/_custom.scss";
+
+.Sidenav {
+    &-img {
+        filter: brightness(1.1);
+        mix-blend-mode: multiply;
+        max-width: 20rem;
+    }
+
+    &-li {
+        cursor: pointer;
+    }
+}

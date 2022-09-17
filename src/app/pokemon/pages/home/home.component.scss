@@ -1,0 +1,20 @@
+@use "src/_custom";
+
+.Header {
+
+
+    &-img {
+        max-width: 6rem;
+        max-height: 4rem;
+    }
+
+    &-a {
+        cursor: pointer;
+    }
+
+    &-canvas-header {
+        display: flex;
+        align-items: center;
+    }
+
+}
