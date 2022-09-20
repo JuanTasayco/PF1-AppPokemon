@@ -4,7 +4,6 @@
 
 export const environment = {
   production: false,
-  keyGiphy: "J4r77j8w5TfMYqKkdlYkHW9tayJznEn4"
 };
 
 /*

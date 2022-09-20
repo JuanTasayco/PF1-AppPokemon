@@ -10,7 +10,7 @@ import { PokemonSpecies } from '../pokemon/interfaces/pokeSpecies.interface';
   providedIn: 'root'
 })
 export class PokemonService {
-  keyGiphy: string = environment.keyGiphy;
+  keyGiphy: string = "J4r77j8w5TfMYqKkdlYkHW9tayJznEn4"
   baseUrl = "https://pokeapi.co/api/v2";
 
 
