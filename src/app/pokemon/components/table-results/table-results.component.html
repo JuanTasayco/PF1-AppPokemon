@@ -1,5 +1,5 @@
-<table class="table">
-    <thead>
+<table class="table table-hover rounded-3">
+    <thead class="table-danger">
         <tr>
             <th scope="col">#</th>
             <th scope="col">Pokemon</th>
@@ -11,8 +11,9 @@
     </thead>
     <tbody>
         <tr *ngFor="let pokemon of pokemons | filtro:search | slice: (page-1) * pageSize : page * pageSize ">
-            <th scope="row" class="text-danger">{{ pokemon.id }}</th>
-            <td>{{pokemon.name}}</td>
+            <th scope="row" class="">{{ pokemon.id }}</th>
+            <td> <a [routerLink]="['/pokemon/allPokemons/',pokemon.name]"
+                    class="text-danger text-decoration-none">{{pokemon.name | titlecase}}</a> </td>
             <td><img [src]="pokemon.sprites.other?.['official-artwork']?.front_default" alt="" width="80px"></td>
             <td>{{pokemon.height * 10 | number}} cm</td>
 
@@ -25,7 +26,7 @@
 </table>
 
 
-<div class="d-flex justify-content-between p-2">
+<div class="d-flex justify-content-between p-2 overflow-auto">
     <ngb-pagination [collectionSize]="collectionSize" [(page)]="page" [pageSize]="pageSize">
     </ngb-pagination>
 

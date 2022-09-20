@@ -1,0 +1,77 @@
+<ng-container *ngIf="pokemonSpecie && pokemon">
+    <div class="container">
+
+        <div class="row mt-5">
+            <div class="col-md-6 d-flex flex-column justify-content-center">
+                <h2 class="display-2 fw-bold pb-3 text-center text-md-start">{{pokemonSpecie.name | titlecase}}</h2>
+                <p>{{frasePokemon}}</p>
+            </div>
+
+            <div class="col-md-6">
+                <figure class="figure">
+                    <img [src]="pokemon.sprites.other?.['official-artwork']?.front_default"
+                        class="figure-img img-fluid rounded" alt="...">
+                    <figcaption class="figure-caption text-center">Modelo arte del Pokemon</figcaption>
+                </figure>
+            </div>
+        </div>
+        <hr class="m-5">
+        <div class="row ">
+            <div class="col-md-6 d-flex align-items-center order-md-2 position-relative ">
+
+                <div class="card-body text-dark border rounded-3 p-5">
+                    <div class="card-title d-flex text-center">
+                        <p class="text-danger">Tipos:</p>
+                        <p *ngFor="let t of pokemon.types" >
+                             {{t.type.name |titlecase}},  </p>
+                    </div>
+                    <div class="card-title d-flex">
+                        <p class="text-danger">Habilidades:</p>
+                        <p *ngFor="let a of pokemon.abilities">{{a.ability.name | titlecase}}, </p>
+                    </div>
+                    <div class="card-title">
+                     <p class="text-danger">Color:</p><p [class]="['btn','btn-'+[pokemonSpecie.color.name]]">{{pokemonSpecie.color.name | titlecase}} </p>
+                    </div>
+                    <div class="card-title d-flex flex-wrap gap-3 justify-content-center align-items-center">
+                        <p class="text-danger">Habitad:</p> <p class="btn btn-outline border-warning">{{pokemonSpecie.habitat.name | titlecase}}</p> 
+                        <p class="text-danger">Generacion:</p> <p class="btn btn-outline border-warning">{{pokemonSpecie.generation.name | titlecase}}</p>
+                        <p class="text-danger">Legendario:</p> <p class="btn btn-outline border-warning">{{pokemonSpecie.is_legendary | falsePoke}}</p>
+                        <p class="text-danger">Mitico:</p> <p class="btn btn-outline border-warning">{{pokemonSpecie.is_mythical | falsePoke}}</p>
+                        <p class="text-danger">Bebé:</p> <p class="btn btn-outline border-warning">{{pokemonSpecie.is_baby | falsePoke}}</p>
+                        <p class="text-danger">Forma:</p> <p class="btn btn-outline border-warning">{{pokemonSpecie.shape.name}}</p>
+                        <p class="text-danger">Nivel de felicidad:</p><p class="btn btn-outline border-warning"> {{pokemonSpecie.base_happiness}}</p>
+                    
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 d-flex justify-content-center">
+
+                <div class="Poke-card card border rounded-3">
+                    <img [src]="pokemon.sprites.other?.home?.front_shiny" alt=""
+                        class="Poke-img figure-img img-fluid rounded">
+                    <div class="card-body bg-danger border">
+                        <div class="card-text">{{pokemon.name | titlecase}}</div>
+                        <p>You can now listen to millions of songs audiobooks,and podcasts on any device anywhere you
+                            like!</p>
+                        <div class="card-section">
+                            <div class="row">
+                                <div class="col-4"><img [src]="pokemon.sprites.back_default" alt=""></div>
+                                <div class="col-4"><img [src]="pokemon.sprites.front_default" alt=""></div>
+                                <div class="col-4"><img [src]="pokemon.sprites.front_shiny" alt=""></div>
+                            </div>
+                        </div>
+
+                        <p class="figure-caption text-center text-light"> Pokedex</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="d-flex justify-content-center mt-5">
+            <button routerLink="../" class="btn btn-danger btn-lg"> <== Regresar</button>
+        </div>
+    </div>
+</ng-container>

@@ -12,6 +12,9 @@ import { MainComponent } from './pages/main/main.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FiltroPipe } from './pipes/filtro.pipe';
+import { PokeCardComponent } from './pages/poke-card/poke-card.component';
+import { FalsePokePipe } from './pipes/false-poke.pipe';
+
 
 
 
@@ -25,6 +28,9 @@ import { FiltroPipe } from './pipes/filtro.pipe';
     PokemonsTableComponent,
     MainComponent,
     FiltroPipe,
+    PokeCardComponent,
+    FalsePokePipe,
+
 
   ],
   imports: [

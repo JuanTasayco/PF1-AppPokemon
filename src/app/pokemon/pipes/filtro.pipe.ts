@@ -7,7 +7,6 @@ import { Pokemon } from '../interfaces/pokemon.interface';
 export class FiltroPipe implements PipeTransform {
 
   transform(pokemons: Pokemon[], valueSearch: string): Pokemon[] {
-    console.log(pokemons)
     if (valueSearch.length === 0) return pokemons;
     const filterPokemons = pokemons.filter(poke => poke.name.includes(valueSearch));
     return filterPokemons;

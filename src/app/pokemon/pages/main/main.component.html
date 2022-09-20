@@ -1,15 +1,19 @@
 <div class="Main container">
-    <div class="row my-5 ">
+
+
+    <div class="Main-section-1 row mt-5">
         <div class="col-12 col-md-8">
             <p class="text-warning fw-bold d-none d-md-block">By. <a class="text-danger text-decoration-none"
                     href="https://www.facebook.com/SyStrix2" target="_blank">Juan Tasayco </a></p>
-            <h1 class="display-1 fw-bold text-center text-md-start">Busca tus Pokemons Favoritos</h1>
-            <p class="Main-p fs-5 mt-3 text-center text-md-start">Las circustancias en que uno nace no tienen
-                importancia, es lo que uno hace con el dón de la vida lo que
-                nos dice quiénes somos</p>
+            <h1 class="Main-title display-1 fw-bold text-center text-md-start">Busca tus Pokemons Favoritos</h1>
+            <p class="Main-p fs-5 mt-3 text-center text-md-start">Los jugadores toman el papel Entrenadores Pokémon y
+                tienen tres objetivos generales:
+                completar la Pokédex mediante la recopilación de todas las especies de Pokémon disponibles que se
+                encuentran, entrenar un equipo de Pokémon poderosos de aquellos que han atrapado para competir contra
+                otros entrenadores.</p>
 
             <div class="button mt-3 d-flex justify-content-center justify-content-md-start">
-                <button class="btn btn-danger btn-lg">Buscar más...</button>
+                <button routerLink="/pokemon/allPokemons" class="btn btn-danger">Buscar más...</button>
 
             </div>
         </div>
@@ -19,16 +23,11 @@
     </div>
 
 
-    <div class="row">
-        <div class="col">
-            <h2 class="fw-bold">Revisa nuestras secciones</h2>
-        </div>
-    </div>
-
-    <div class="Main-card-row row mt-3">
+    <!--  <div class="Main-card-row row ">
         <div class="Main-card-col col-md-4">
             <div class="Main-card card rounded-3 ">
                 <img src="assets/card_1.jpg" alt="" class="Main-card-img rounded-3 img-fluid">
+                <div class="card-body"> <div class="card-title text-dark text-center"> asdaskl</div></div>
             </div>
         </div>
         <div class="Main-card-col col-md-4">
@@ -41,7 +40,107 @@
                 <img src="assets/card_3.png" alt="" class="Main-card-img rounded-3">
             </div>
         </div>
+    </div> -->
+    <div class="Main-section-2 Card row ">
+        <div class="Card-col1 col-md-7 m-auto">
+            <div class="Card-principal card mb-3 border py-5" style="border:2px solid blue">
+                <div class="row">
+                    <div class="col-md-4 rounded-3 d-flex justify-content-center">
+                        <img src="assets/find-logo.png" alt="" class="img-fluid rounded-3 Main-section-2-img">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body text-dark">
+                            <p class="card-text">
+                                Las card permiten que puedas obtener información especifica del pokemon elegido, también
+                                puedes verificar la categoría a la que pertenecen, sus tipos y muchas cosas más.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-5 d-flex justify-content-center">
+            <div class="Card2 card border rounded-3">
+                <div class="row">
+                    <div class="col-12">
+                        <img src="assets/card_3.png" alt="" class="img-fluid">
+                    </div>
+                    <div class="col-12">
+                        <div class="card-body">
+                            <div class="card-title text-center"> <a class="btn btn-danger w-100">Bulbasaur</a></div>
+                            <div class="card-text d-flex justify-content-center gap-4">
+                                <a class="btn btn-danger">Fuego</a>
+                                <a class="btn btn-warning">Legendario</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+
+
+
+    <div class="row mt-5">
+        <div class="col-md-12">
+            <h2 class="fw-bold display-5 text-center">"Curiosidades" lee sus descripciones.</h2>
+            <p class="text-center w-75 m-auto fs-5 mt-3">’ve written a few thousand words on why traditional “semantic class names” are the reason CSS is hard to
+                maintain, but the truth is you’re never going to believe me until you actually try it. If you can
+                suppress the urge to retch long enough to give it a chance</p>
+        </div>
+    </div>
+
+
+    <div id="pokeCarrousel" class="border carousel rounded-3 slide my-5" data-bs-ride="carousel">
+        <div class="carousel-inner rounded-3">
+            <div class="carousel-item active">
+                <img src="assets/poke_main_1.png" class="Carrousel-img d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="assets/poke_main_3.png" class="Carrousel-img d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="assets/poke_main_1.png" class="Carrousel-img d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#pokeCarrousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#pokeCarrousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
 
 
 </div>

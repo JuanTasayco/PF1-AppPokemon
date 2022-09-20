@@ -1,6 +1,12 @@
 @use "src/_custom" as *;
 
 .Main {
+    
+&-section-1{
+
+    margin-bottom: 5rem;
+}
+
     &-img {
         filter: brightness(1.1);
         mix-blend-mode: multiply;
@@ -16,9 +22,13 @@
 
     }
 
+    &-title{
+        letter-spacing: -1px;
+    }
+
     &-card {
         transition:box-shadow .2s ease-out;
-
+        margin-top:6rem;
         &:hover {
             box-shadow: $box-shadow-sm ;
             cursor: pointer;
@@ -29,7 +39,7 @@
 
         &-row {
             position: relative;
-            max-height: 18rem;
+           
         }
 
         &-img {
@@ -46,4 +56,43 @@
         }
     }
 
+
+
+    &-section-2{
+        margin-bottom: 5rem;
+
+        &-img{
+            max-height: 10rem;
+            filter: brightness(1.1);
+            mix-blend-mode: multiply;
+
+        }
+    }
+
 }
+
+.Carrousel{
+
+    border:2px solid red;
+    &-img{
+      max-height: 28rem;
+      object-fit: cover;
+      
+    }
+}
+
+
+.Card{
+    &-principal{
+        @include media-breakpoint-up(lg){
+            border:2px solid green;
+            margin-right: -4rem;
+            z-index: 999;
+        } 
+     
+    }
+}
+.Card2{
+    max-width: 30rem;
+}
+

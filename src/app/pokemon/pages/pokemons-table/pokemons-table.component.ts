@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { combineLatest, Observable } from 'rxjs';
+import { combineLatest, forkJoin, Observable } from 'rxjs';
 import { PokemonService } from 'src/app/services/pokemon.service';
 import { Pokemon } from '../../interfaces/pokemon.interface';
 
@@ -20,7 +20,7 @@ export class PokemonsTableComponent implements OnInit {
     for (let i = 1; i < 100; i++) {
       this.arrayPromisesPokemon.push(this.pokemonService.getPokemonByNumber(i));
     }
-    combineLatest(this.arrayPromisesPokemon)
+    forkJoin(this.arrayPromisesPokemon)
       .subscribe(resp => {
         this.pokemons = resp;
       })
