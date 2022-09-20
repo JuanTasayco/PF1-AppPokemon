@@ -70,3 +70,60 @@
         color: black;
     }
 }
+
+.border {
+    &-green {
+        background: green;
+        color: white;
+    }
+
+    &-red {
+        background: red;
+        color: white;
+    }
+
+    &-yellow {
+        background: yellow;
+        color: black;
+    }
+
+    &-white {
+        background: white;
+        color: black;
+    }
+
+    &-black {
+        background: black;
+        color: white;
+    }
+
+    &-blue {
+        background: #0550A4;
+        color: white;
+    }
+
+    &-brown {
+        background: brown;
+        color: white;
+    }
+
+    &-purple {
+        background: purple;
+        color: white;
+    }
+
+    &-gray {
+        background: gray;
+        color: white;
+    }
+
+    &-pink {
+        background: pink;
+        color: black;
+    }
+
+    &-orange {
+        background: orange;
+        color: black;
+    }
+}

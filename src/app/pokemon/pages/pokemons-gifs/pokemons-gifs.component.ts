@@ -11,16 +11,14 @@ export class PokemonsGifsComponent implements OnInit {
   gifs: string[] = [];
   busquedas: string[] = [];
   arrayBusquedasEsVacio: boolean = true;
-  
+
   ngOnInit(): void {
-    this.arrayBusquedasEsVacio = true;
   }
 
   obtenerBusqueda(pokemon: string) {
     this.pokemonService.getGiphy(pokemon)
       .subscribe(resp => {
         this.gifs = resp;
-        this.arrayBusquedasEsVacio = false;
       })
 
     if (!this.busquedas.includes(pokemon)) {

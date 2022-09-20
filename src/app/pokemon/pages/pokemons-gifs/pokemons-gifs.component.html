@@ -20,7 +20,7 @@
             <div class="container-xl">
                 <app-gif-results [gifsResults]="gifs" class="row"></app-gif-results>
             </div>
-            <div *ngIf="!arrayBusquedasEsVacio && busquedas.length<1">
+            <div *ngIf="gifs.length===0 && busquedas.length>0">
                 <div class="alert alert-danger" role="alert">
                     Aún no podemos encontrar resultados con: {{busquedas.at(0)}}
                 </div>

@@ -13,7 +13,7 @@ export class SearchComponent implements OnInit {
   @Output() emitirBusqueda: EventEmitter<string> = new EventEmitter();
   @Output() emitirDebounce: EventEmitter<string> = new EventEmitter();
 
-  expresionValidacionCampo: string = "([a-zA-Z0-9]+)";
+  expresionValidacionCampo: string = "([a-zA-Z0-9ñ]+)";
   miFormulario: FormGroup = this.fb.group({
     pokemon: ["", [Validators.required, Validators.pattern(this.expresionValidacionCampo)]]
   })
